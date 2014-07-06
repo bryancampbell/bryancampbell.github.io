@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Java, PHP, SEO Tutorials plus Gaming, Technology, Anime, Novel Reviews | bryanlcampbell.com</title>
+		<meta content="Resources for Java and PHP developers - Provides unique and complete Java web development tutorials and articles.  Also reviews on games, anime, technology and novels." name="description" />
+		<meta content="J2EE, Java, Hibernate, Spring, Thymeleaf, Maven, jQuery, Java tutorials, Hibernate tutorials, Spring tutorials, Thymeleaf tutorials, Maven tutorials, jQuery tutorials, Java example, Hibernate example, Spring example, Maven example, Thymeleaf example, jQuery example, Karaf, Tomcat" name="keywords" />
+		<!-- Mobile Devices Viewport Resset-->
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+
+		<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link href="/css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" />
+		<link href="/css/vendor/font-awesome/font-awesome.min.css" rel="stylesheet" />
+
+		<!--[if IE 8]>
+			<link rel="stylesheet" href="/css/vendor/font-awesome/font-awesome-ie7.min.css">
+		<![endif]-->
+
+		<link href="/css/vendor/prettyPhoto/prettyPhoto.css" rel="stylesheet" />
+
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato:300,400,700,400italic,700italic|Droid+Serif" rel="stylesheet" type="text/css" />
+
+		<!-- base layout styling -->
+		<link href="/css/base.css" rel="stylesheet" />
+
+		<!-- components styling -->
+		<link href="/css/components.css" rel="stylesheet" />
+		
+		<!-- template colorschemes -->
+		<link href="/css/colorschemes/blc.css" rel="stylesheet" />
+
+		<script src="/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+	</head>
+	<body>
+
+		<h1 class="sr-only">bryanlcampbell.com</h1>
+		
+		<nav class="header-navbar" id="header" role="navigation">
+
+			<div class="header-navbar-inner container">
+			
+				<div class="navbar-brand" id="brand">
+					<a href="/" rel="bookmark">
+
+						<!-- to disable lazy loading, remove data-src and data-src-retina -->
+						<img alt="bryanlcampbell.com" data-src="/img/bryanlcampbell-retina.png" data-src-retina="/img/bryanlcampbell-retina.png" height="56" src="/img/bryanlcampbell-retina.png" />
+
+						<!--fallback for no javascript browsers-->
+						</a><noscript><a href="/" rel="bookmark">
+							<img alt="" src="/img/logo.png" />
+						</a></noscript>
+					
+				</div>
+
+				<ul class="nav nav-pages hidden-xs">
+					<li><a href="/contact-us">Contact</a></li>
+					<li><a href="#">Donate</a></li>
+					<li><a href="/rss.xml" target="_blank">RSS</a></li>
+				</ul>
+
+				<ul class="nav nav-icons">
+					<li>
+						<a class="btn-icon" data-toggle=".header-navbar-inner" data-toggle-class="search-toggled-in" href="#">
+							<span class="search-toggled-out-icon glyphicon glyphicon-search"></span>
+							<span class="search-toggled-in-icon glyphicon glyphicon-remove"></span>
+						</a>
+					</li>
+				</ul>
+
+				<div class="search-wrapper js-stoppropagation">
+					<div class="search-wrapper-inner">
+						<form method="get" action="/search">
+							<input name="search" placeholder="search ... " type="text" />
+							<button class="btn-icon" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+						</form>
+					</div>
+				</div>
+
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a data-toggle="li" href="#">Features</a>
+						<div class="subnav-wrapper">
+							<ul class="subnav">
+								<li><a href="/article/coding">Coding</a></li>
+								<li><a href="/article/seo">SEO</a></li>
+								<li><a href="/article/technology">Technology</a></li>
+								<li><a href="/article/gaming">Gaming</a></li>
+								<li><a href="/article/anime">Anime</a></li>
+								<li><a href="/article/novels">Novels</a></li>
+								<li><a href="/article/work-projects">Work Projects</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="full-subnav-wrapper">
+						<a data-toggle="li" href="#">Coding</a>
+						<div class="row subnav-wrapper subnav-tabbed">
+							
+							<ul class="col-md-2 col-sm-2 subnav-tabbed-tabs alignright">
+								
+								<li><a href="/article/coding">View All </a></li>
+								
+							</ul>
+
+							<div class="col-md-10 col-sm-10 subnav-tabbed-panels">
+
+								<div class="subnav-tabbed-panel active" id="tabAll">
+									
+									<article class="entry type-post style-thumbnail col-sm-3 col-md-3" itemscope="" itemtype="http://schema.org/Article">
+
+										<figure class="entry-thumbnail">
+											<a href="/article/coding/using-genetic-algorithms-effectively" title="Using Genetic Algorithms Effectively">
+													<!-- to disable lazy loading, remove data-src and data-src-retina -->
+												<img data-src-retina="${navArticle.imageUrl}" height="230" itemprop="image" th:data-src="${navArticle.imageUrl}" width="230" alt="Using Genetic Algorithms Effectively" src="http://www.alvervalleysoftware.com/wp-content/uploads/2013/12/dreamstime_xs_27706957.jpg" />
+
+												<!--fallback for no javascript browsers-->
+												</a><noscript><a href="/article/coding/using-genetic-algorithms-effectively" title="Using Genetic Algorithms Effectively">
+													<img alt="Using Genetic Algorithms Effectively" src="http://www.alvervalleysoftware.com/wp-content/uploads/2013/12/dreamstime_xs_27706957.jpg" />
+												</a></noscript>
+											
+										</figure>
+
+										<h3 class="entry-title" itemprop="name"><a itemprop="url" rel="bookmark" href="/article/coding/using-genetic-algorithms-effectively" title="Using Genetic Algorithms Effectively">Using Genetic Algorithms Effectively</a> </h3>
+									
+									</article>
+									
+									<article class="entry type-post style-thumbnail col-sm-3 col-md-3" itemscope="" itemtype="http://schema.org/Article">
+
+										<figure class="entry-thumbnail">
+											<a href="/article/coding/learning-scala" title="Learning Scala">
+													<!-- to disable lazy loading, remove data-src and data-src-retina -->
+												<img data-src-retina="${navArticle.imageUrl}" height="230" itemprop="image" th:data-src="${navArticle.imageUrl}" width="230" alt="Learning Scala" src="http://3.bp.blogspot.com/-1Ql_2gGfpZc/UOsBrRe-4xI/AAAAAAAAAfU/PV4AeF3G4OM/s1600/scala.png" />
+
+												<!--fallback for no javascript browsers-->
+												</a><noscript><a href="/article/coding/learning-scala" title="Learning Scala">
+													<img alt="Learning Scala" src="http://3.bp.blogspot.com/-1Ql_2gGfpZc/UOsBrRe-4xI/AAAAAAAAAfU/PV4AeF3G4OM/s1600/scala.png" />
+												</a></noscript>
+											
+										</figure>
+
+										<h3 class="entry-title" itemprop="name"><a itemprop="url" rel="bookmark" href="/article/coding/learning-scala" title="Learning Scala">Learning Scala</a> </h3>
+									
+									</article>
+									
+									<article class="entry type-post style-thumbnail col-sm-3 col-md-3" itemscope="" itemtype="http://schema.org/Article">
+
+										<figure class="entry-thumbnail">
+											<a href="/article/coding/blog-building-part1-spring-boot-spring4" title="Spring Boot, Spring 4 - Blog Building Part 1">
+													<!-- to disable lazy loading, remove data-src and data-src-retina -->
+												<img data-src-retina="${navArticle.imageUrl}" height="230" itemprop="image" th:data-src="${navArticle.imageUrl}" width="230" alt="Spring Boot, Spring 4 - Blog Building Part 1" src="http://bryanlcampbell.com/media/branches.jpg" />
+
+												<!--fallback for no javascript browsers-->
+												</a><noscript><a href="/article/coding/blog-building-part1-spring-boot-spring4" title="Spring Boot, Spring 4 - Blog Building Part 1">
+													<img alt="Spring Boot, Spring 4 - Blog Building Part 1" src="http://bryanlcampbell.com/media/branches.jpg" />
+												</a></noscript>
+											
+										</figure>
+
+										<h3 class="entry-title" itemprop="name"><a itemprop="url" rel="bookmark" href="/article/coding/blog-building-part1-spring-boot-spring4" title="Spring Boot, Spring 4 - Blog Building Part 1">Spring Boot, Spring 4 - Blog Building Part 1</a> </h3>
+									
+									</article>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="full-subnav-wrapper">
+						<a data-toggle="li" href="#">Technology</a>
+						<div class="row subnav-wrapper subnav-tabbed">
+							
+							<ul class="col-md-2 col-sm-2 subnav-tabbed-tabs alignright">
+								
+								<li><a href="/article/technology">View All </a></li>
+								
+							</ul>
+
+							<div class="col-md-10 col-sm-10 subnav-tabbed-panels">
+
+								<div class="subnav-tabbed-panel active" id="tabAll">
+									
+									<article class="entry type-post style-thumbnail col-sm-3 col-md-3" itemscope="" itemtype="http://schema.org/Article">
+
+										<figure class="entry-thumbnail">
+											<a href="/article/technology/new_site_launch_of_bryanlcampbell" title="It&#39;s official... We&#39;ve launched our brand new site today!">
+													<!-- to disable lazy loading, remove data-src and data-src-retina -->
+												<img data-src-retina="${navArticle.imageUrl}" height="230" itemprop="image" th:data-src="${navArticle.imageUrl}" width="230" alt="It&#39;s official... We&#39;ve launched our brand new site today!" src="http://bryanlcampbell.com/media/new-launch.jpg" />
+
+												<!--fallback for no javascript browsers-->
+												</a><noscript><a href="/article/technology/new_site_launch_of_bryanlcampbell" title="It&#39;s official... We&#39;ve launched our brand new site today!">
+													<img alt="It&#39;s official... We&#39;ve launched our brand new site today!" src="http://bryanlcampbell.com/media/new-launch.jpg" />
+												</a></noscript>
+											
+										</figure>
+
+										<h3 class="entry-title" itemprop="name"><a itemprop="url" rel="bookmark" href="/article/technology/new_site_launch_of_bryanlcampbell" title="It&#39;s official... We&#39;ve launched our brand new site today!">It&#39;s official... We&#39;ve launched our brand new site today!</a> </h3>
+									
+									</article>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container" id="main">
+		
+			<div class="section ad-wrapper hidden-xs bg-secodary section-no-margin-bottom">
+				<div class="ad-inner">
+					<div class="ad ad-728x90">
+						<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- BLC - Top Ad 728x90 -->
+						<ins class="adsbygoogle" data-ad-client="ca-pub-8419259591491946" data-ad-slot="3313322169" style="display:inline-block;width:728px;height:90px"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+				</div>
+			</div>
+
+			<div class="content section row" id="content">
+
+				<div class="col-md-8 bg-base col-lg-8 col-xl-9">
+
+					<div class="ribbon ribbon-highlight">
+						<ol class="breadcrumb ribbon-inner">
+							<li><a href="/">Home</a></li>
+							<li class="active">Technology</li>
+						</ol>
+					</div>
+
+					<header class="page-header">
+						
+						<h2 class="page-title">Technology</h2>
+
+					</header>
+
+					<div class="entries">
+
+						<article class="entry style-media media type-post" itemscope="" itemtype="http://schema.org/Article">
+
+							<figure class="media-object pull-left entry-thumbnail hidden-xs">
+
+								<!-- to disable lazy loading, remove data-src and data-src-retina -->
+								<img data-src-retina="${article.imageUrl}" height="230" itemprop="image" th:data-src="${article.imageUrl}" width="230" alt="It&#39;s official... We&#39;ve launched our brand new site today!" src="http://bryanlcampbell.com/media/new-launch.jpg" />
+
+								<!--fallback for no javascript browsers-->
+								<noscript>
+									<img alt="It&#39;s official... We&#39;ve launched our brand new site today!" src="http://bryanlcampbell.com/media/new-launch.jpg" />
+								</noscript>
+
+							</figure>
+
+							<div class="media-body">
+
+								<header class="entry-header">
+									<h3 class="entry-title" itemprop="name">
+										<a itemprop="url" rel="bookmark" href="/article/technology/new_site_launch_of_bryanlcampbell" title="It&#39;s official... We&#39;ve launched our brand new site today!">It&#39;s official... We&#39;ve launched our brand new site today!</a>
+									</h3>
+
+									<div class="entry-meta">
+										<span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">by <span itemprop="name"><a href="#">Bryan Campbell</a></span></span>
+										<span class="entry-date">on <time itemprop="datePublished" content="2014-02-07T11:56:00+0400" datetime="2014-02-07T11:56:00+0400">February 7 2014</time></span>
+										<span class="category">In <a itemprop="genre" href="/article/technology">Technology</a></span>
+									</div>
+								</header>
+
+								<p>
+									<span>Officially launching the brand new site today!  With that being said, I&#39;m pretty sure no one will read this right away.  But that is ok! Everything starts from somewhere right?  For those that do read this post (eventually), I want you to know that there are many exciting...</span>
+									<a class="more-link" href="/article/technology/new_site_launch_of_bryanlcampbell">Continue Reading<i class="icon icon-long-arrow-right"></i></a>
+								</p>
+
+							</div>
+
+						</article>
+						
+					</div><!--/.entris-->
+
+				</div><!--/.col-md-8.col-lg-8.col-xl-9-->
+
+				<div class="sidebar col-md-4 col-lg-4 col-xl-3">
+				
+<!-- 					<aside class="widget ad-wrapper"> -->
+<!-- 						<div class="ad-inner"> -->
+<!-- 							<div class="ad ad-300x250"> -->
+<!-- 								<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+<!-- 								BLC - Side Ad 300x250 -->
+<!-- 								<ins class="adsbygoogle" -->
+<!-- 								     style="display:inline-block;width:300px;height:250px" -->
+<!-- 								     data-ad-client="ca-pub-8419259591491946" -->
+<!-- 								     data-ad-slot="3034120562"></ins> -->
+								<script>
+// 								(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</aside> -->
+
+					<aside class="widget">
+
+						<h2 class="widget-title ribbon"><span>What's Hot</span></h2>
+
+						<div class="entries row">
+
+							<article class="type-post style-media-list media col-sm-6 col-md-12" itemscope="" itemtype="http://schema.org/Article">
+
+								<!-- to disable lazy loading, remove data-src and data-src-retina -->
+								<img class="media-object pull-left" data-src-retina="${hotArticle.imageUrl}" height="80" itemprop="image" th:data-src="${hotArticle.imageUrl}" width="80" alt="Spring Boot, Spring 4 - Blog Building Part 1" src="http://bryanlcampbell.com/media/branches.jpg" />
+
+								<!--fallback for no javascript browsers-->
+								<noscript>
+									<img alt="Spring Boot, Spring 4 - Blog Building Part 1" src="http://bryanlcampbell.com/media/branches.jpg" />
+								</noscript>
+
+								<div class="media-body">
+									<h3 class="entry-title" itemprop="name">
+										<a itemprop="url" rel="bookmark" href="/article/coding/blog-building-part1-spring-boot-spring4" title="Spring Boot, Spring 4 - Blog Building Part 1">Spring Boot, Spring 4 - Blog Building Part 1</a>
+									</h3>
+									<div class="entry-meta">
+										<span class="entry-date">on <time itemprop="datePublished" content="2014-02-11T13:26:19+0400" datetime="2014-02-11T13:26:19+0400">February 11 2014</time></span>
+										<span class="category">In <a itemprop="genre" href="/article/coding">Coding</a></span>
+									</div>
+								</div>
+
+							</article>
+
+							<article class="type-post style-media-list media col-sm-6 col-md-12" itemscope="" itemtype="http://schema.org/Article">
+
+								<!-- to disable lazy loading, remove data-src and data-src-retina -->
+								<img class="media-object pull-left" data-src-retina="${hotArticle.imageUrl}" height="80" itemprop="image" th:data-src="${hotArticle.imageUrl}" width="80" alt="It&#39;s official... We&#39;ve launched our brand new site today!" src="http://bryanlcampbell.com/media/new-launch.jpg" />
+
+								<!--fallback for no javascript browsers-->
+								<noscript>
+									<img alt="It&#39;s official... We&#39;ve launched our brand new site today!" src="http://bryanlcampbell.com/media/new-launch.jpg" />
+								</noscript>
+
+								<div class="media-body">
+									<h3 class="entry-title" itemprop="name">
+										<a itemprop="url" rel="bookmark" href="/article/technology/new_site_launch_of_bryanlcampbell" title="It&#39;s official... We&#39;ve launched our brand new site today!">It&#39;s official... We&#39;ve launched our brand new site today!</a>
+									</h3>
+									<div class="entry-meta">
+										<span class="entry-date">on <time itemprop="datePublished" content="2014-02-07T11:56:00+0400" datetime="2014-02-07T11:56:00+0400">February 7 2014</time></span>
+										<span class="category">In <a itemprop="genre" href="/article/technology">Technology</a></span>
+									</div>
+								</div>
+
+							</article>
+
+							<article class="type-post style-media-list media col-sm-6 col-md-12" itemscope="" itemtype="http://schema.org/Article">
+
+								<!-- to disable lazy loading, remove data-src and data-src-retina -->
+								<img class="media-object pull-left" data-src-retina="${hotArticle.imageUrl}" height="80" itemprop="image" th:data-src="${hotArticle.imageUrl}" width="80" alt="Learning Scala" src="http://3.bp.blogspot.com/-1Ql_2gGfpZc/UOsBrRe-4xI/AAAAAAAAAfU/PV4AeF3G4OM/s1600/scala.png" />
+
+								<!--fallback for no javascript browsers-->
+								<noscript>
+									<img alt="Learning Scala" src="http://3.bp.blogspot.com/-1Ql_2gGfpZc/UOsBrRe-4xI/AAAAAAAAAfU/PV4AeF3G4OM/s1600/scala.png" />
+								</noscript>
+
+								<div class="media-body">
+									<h3 class="entry-title" itemprop="name">
+										<a itemprop="url" rel="bookmark" href="/article/coding/learning-scala" title="Learning Scala">Learning Scala</a>
+									</h3>
+									<div class="entry-meta">
+										<span class="entry-date">on <time itemprop="datePublished" content="2014-03-17T15:16:01+0400" datetime="2014-03-17T15:16:01+0400">March 17 2014</time></span>
+										<span class="category">In <a itemprop="genre" href="/article/coding">Coding</a></span>
+									</div>
+								</div>
+
+							</article>
+
+							<article class="type-post style-media-list media col-sm-6 col-md-12" itemscope="" itemtype="http://schema.org/Article">
+
+								<!-- to disable lazy loading, remove data-src and data-src-retina -->
+								<img class="media-object pull-left" data-src-retina="${hotArticle.imageUrl}" height="80" itemprop="image" th:data-src="${hotArticle.imageUrl}" width="80" alt="Using Genetic Algorithms Effectively" src="http://www.alvervalleysoftware.com/wp-content/uploads/2013/12/dreamstime_xs_27706957.jpg" />
+
+								<!--fallback for no javascript browsers-->
+								<noscript>
+									<img alt="Using Genetic Algorithms Effectively" src="http://www.alvervalleysoftware.com/wp-content/uploads/2013/12/dreamstime_xs_27706957.jpg" />
+								</noscript>
+
+								<div class="media-body">
+									<h3 class="entry-title" itemprop="name">
+										<a itemprop="url" rel="bookmark" href="/article/coding/using-genetic-algorithms-effectively" title="Using Genetic Algorithms Effectively">Using Genetic Algorithms Effectively</a>
+									</h3>
+									<div class="entry-meta">
+										<span class="entry-date">on <time itemprop="datePublished" content="2014-05-12T21:29:00+0400" datetime="2014-05-12T21:29:00+0400">May 12 2014</time></span>
+										<span class="category">In <a itemprop="genre" href="/article/coding">Coding</a></span>
+									</div>
+								</div>
+
+							</article>
+
+						</div>
+
+					</aside><!--/.widget-->
+
+					<aside class="widget">
+
+						<h3 class="widget-title ribbon"><span>Tags</span></h3>
+
+						<div class="tagcloud">
+							<a href="/tag/java">java</a>
+							<a href="/tag/spring 4">spring 4</a>
+							<a href="/tag/spring boot">spring boot</a>
+							<a href="/tag/thymeleaf">thymeleaf</a>
+							<a href="/tag/scala">scala</a>
+							<a href="/tag/artificial intelligence">artificial intelligence</a>
+							<a href="/tag/jdbc">jdbc</a>
+							<a href="/tag/jdbctemplate">jdbctemplate</a>
+							<a href="/tag/mysql">mysql</a>
+							<a href="/tag/java 8">java 8</a>
+							<a href="/tag/maven">maven</a>
+							<a href="/tag/spring framework 4">spring framework 4</a>
+							<a href="/tag/bdd">bdd</a>
+							<a href="/tag/behavior driven development">behavior driven development</a>
+							<a href="/tag/concurrency">concurrency</a>
+							<a href="/tag/pattern matching">pattern matching</a>
+							<a href="/tag/threads">threads</a>
+							<a href="/tag/view bounds">view bounds</a>
+							<a href="/tag/genetic algorithms">genetic algorithms</a>
+							<a href="/tag/stock trading">stock trading</a>
+						</div>
+
+					</aside><!--/.widget-->
+
+				</div><!--/.sidebar col-md-4 col-lg-4 col-xl-3-->
+
+			</div><!--/#content-->
+			
+			<aside class="section ad-wrapper hidden-xs bg-secodary section-no-margin-bottom">
+				<div class="ad-inner">
+					<div class="ad ad-728x90">
+					<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- BLC - Bottom Ad 728x90 -->
+					<ins class="adsbygoogle" data-ad-client="ca-pub-8419259591491946" data-ad-slot="1557387364" style="display:inline-block;width:728px;height:90px"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					</div>
+				</div>
+			</aside>
+			
+		</div><!--#main.container-->
+
+		<footer class="footer-area" id="footer">
+
+			<div class="footer-top container">
+	
+				<div class="row">
+
+					<div class="widget col-xs-12 col-sm-4">
+
+						<h4 class="widget-title">Categories</h4>
+
+						<ul class="entries links links-2-cols">
+							<li><a href="/article/coding">Coding</a></li>
+							<li><a href="/article/seo">SEO</a></li>
+							<li><a href="/article/technology">Technology</a></li>
+							<li><a href="/article/gaming">Gaming</a></li>
+							<li><a href="/article/anime">Anime</a></li>
+							<li><a href="/article/novels">Novels</a></li>
+							<li><a href="/article/work-projects">Work Projects</a></li>
+						</ul>
+
+					</div><!--/.col-3-->
+
+					<div class="clearfix visible-xs"></div>
+
+					<div class="widget col-xs-6 col-sm-2">
+
+						<h4 class="widget-title">Information</h4>
+
+						<ul class="entries links links">
+<!-- 							<li><a href="#">About</a></li> -->
+<!-- 							<li><a href="#">Advertise</a></li> -->
+							<li><a href="/contact-us">Contact</a></li>
+							<li><a href="#">Donate</a></li>
+							<li><a href="/rss.xml">RSS</a></li>
+<!-- 							<li><a href="#">Terms &amp; Conditions</a></li> -->
+<!-- 							<li><a href="#">Privacy</a></li> -->
+						</ul>
+
+					</div><!--/.col-3-->
+
+					<div class="widget col-xs-6 col-sm-2">
+
+						<h4 class="widget-title">Follow Us</h4>
+
+						<ul class="entries links">
+							<li><a href="https://www.facebook.com/bryanlcampbellsite" target="_blank"><i class="icon-facebook-sign icon-2x"></i> Facebook</a></li>
+							<li><a href="https://twitter.com/intent/follow?source=followbutton&amp;variant=1.0&amp;screen_name=campbellbryan" target="_blank"><i class="icon-twitter-sign icon-2x"></i> Twitter</a></li>
+							<li><a href="https://plus.google.com/114926853602169440135" rel="publisher" target="_blank"><i class="icon-google-plus-sign icon-2x"></i> Google Plus</a></li>
+							<li><a href="http://www.linkedin.com/in/bryanlcampbell" target="_blank"><i class="icon-linkedin-sign icon-2x"></i> Linkedin</a></li>
+						</ul>
+
+					</div><!--/.col-3-->
+
+					<div class="clearfix visible-xs"></div>
+
+					<div class="widget col-xs-12 col-sm-4">
+
+						<h4 class="widget-title">Subscribe</h4>
+
+						<form class="form-horizontal" role="form">
+<!-- 							<div class="form-group"> -->
+<!-- 								<label for="subscribeEmail" class="col-lg-2 control-label">EMAIL</label> -->
+<!-- 								<div class="col-lg-10"> -->
+<!-- 									<input type="text" class="form-control" id="subscribeEmail" placeholder="Your Email"> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+							<div class="form-group">
+								<label class="col-lg-2 control-label">RSS</label>
+								<div class="col-lg-10">
+									<p class="form-control-static">
+										<a href="/rss.xml" target="_blank"><i class="icon-rss-sign"></i> Posts</a> &nbsp; &nbsp;
+										<a href="http://disqus.com/bryanlcampbell/latest.rss" target="_blank"><i class="icon-rss-sign"></i> Comments</a>
+									</p>
+								</div>
+							</div>
+						</form>
+
+					</div><!--/.col-3-->
+
+				</div><!--row.-->
+
+			</div>
+
+			<div class="footer-bottom">
+
+				<div class="container aligncenter">
+
+					<p>&copy;<span>2014</span> <span itemscope="" itemtype="http://schema.org/Organization"><a href="http://bryanlcampbell.com" itemprop="name">bryanlcampbell.com</a></span>. All Rights Reserved. </p><p>
+
+				</p></div>
+
+			</div>
+
+		</footer>
+		
+		<script src="/js/vendor/jquery/jquery-1.10.1.min.js"></script>
+		<!--
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../vendor/jquery-1.10.1.min.js"><\/script>')</script>
+	-->
+		<script src="/js/vendor/bootstrap/bootstrap.min.js"></script>
+		<script src="/js/vendor/prettyPhoto/jquery.prettyPhoto.js"></script>
+		<script src="/js/jquery.unveil.min.js"></script>
+		<script src="/js/main.js"></script>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-47734428-1', 'bryanlcampbell.com');
+		  ga('send', 'pageview');
+		
+		</script>
+	
+</body></html></div>
+
